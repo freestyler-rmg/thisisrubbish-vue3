@@ -1,4 +1,4 @@
-import './assets/main.css'
+import './assets/reset.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -8,4 +8,4 @@ const app = createApp(App)
 
 app.use(router)
 
-app.mount('#app')
+app.mount('#rootin-tootin-shootin-vue')
