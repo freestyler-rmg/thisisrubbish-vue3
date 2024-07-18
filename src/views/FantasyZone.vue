@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <div class="go-away">
-      <div class="longggggg" v-for="long in 10" :key="long">
-        <div class="boxxxxx" v-for="box in 50" :key="long + box"><div></div></div>
+    <div class="additional-container">
+      <div class="go-away">
+        <div class="longggggg" v-for="long in 8" :key="long">
+          <div class="boxxxxx" v-for="box in 50" :key="long + box"><div></div></div>
+        </div>
       </div>
     </div>
 
@@ -22,17 +24,26 @@ $color-two-pale: #ccc;
 
 .container {
   background: linear-gradient(to bottom, $color-one-fresh, #fff);
-  width: 100vw;
+  max-width: 777px;
+  width: 100%;
   height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+
+.additional-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .go-away {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  width: 100vw;
+  flex: 0 0 777px;
   transform-style: preserve-3d;
-  transform: translate(-50%, -50%) perspective(50px) rotateX(15deg) scaleX(5);
+  transform: perspective(40px) rotateX(15deg) scaleX(3) translate3d(0, 10px, -40px);
 }
 
 .longggggg {

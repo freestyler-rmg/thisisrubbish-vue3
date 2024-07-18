@@ -1,13 +1,15 @@
 <template>
   <div class="container">
-    <div class="bg-radial" />
-    <div class="box">
-      <div class="inside one" />
-      <div class="inside two" />
-      <div class="inside three" />
-      <div class="inside four" />
-      <div class="inside five" />
-      <div class="inside six" />
+    <div class="inner-container">
+      <div class="bg-radial" />
+      <div class="box">
+        <div class="inside one" />
+        <div class="inside two" />
+        <div class="inside three" />
+        <div class="inside four" />
+        <div class="inside five" />
+        <div class="inside six" />
+      </div>
     </div>
 
     <router-link :to="{ name: 'BoxOptic' }"><sakura-link /></router-link>
@@ -20,23 +22,30 @@ import SakuraLink from '../components/SakuraLink.vue'
 
 <style lang="scss" scoped>
 .container {
-  padding: 80px;
+  max-width: 777px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
   background-color: #333;
-  width: 100vw;
+}
+
+.inner-container {
+  padding: 80px;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .bg-radial {
   width: 1000px;
   height: 1000px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-image: radial-gradient(#fff 0%, #fff 35%, #333 40%);
+  position: absolute;
+  background-image: radial-gradient(#fff 0%, #fff 34%, #333 35%);
 }
 
 .box {
@@ -44,6 +53,7 @@ import SakuraLink from '../components/SakuraLink.vue'
   width: 100%;
   position: relative;
   flex: 0 1 auto;
+  z-index: 2;
 
   .inside {
     position: absolute;
@@ -56,7 +66,7 @@ import SakuraLink from '../components/SakuraLink.vue'
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     &::before,
-    &:after {
+    &::after {
       content: '';
       box-shadow: 0 0 0 7px #333;
       position: absolute;

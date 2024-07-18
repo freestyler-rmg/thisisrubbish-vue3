@@ -1,58 +1,32 @@
 <template>
   <div class="container">
-    <div class="bbbbbox">
-      <div class="box odd">
-        <div class="box even">
-          <div class="box odd">
-            <div class="box even">
-              <div class="box odd">
-                <div class="box even">
-                  <div class="box odd">
-                    <div class="box even">
-                      <div class="box odd">
-                        <div class="box even">
-                          <div class="box odd">
-                            <div class="box even">
-                              <div class="box odd">
-                                <div class="box even">
-                                  <div class="box odd">
-                                    <div class="box even">
-                                      <div class="box odd">
-                                        <div class="box even">
-                                          <div class="box odd">
-                                            <div class="box even">
-                                              <div class="box odd">
-                                                <div class="box even">
-                                                  <div class="box odd">
-                                                    <div class="box even">
-                                                      <div class="box odd">
-                                                        <div class="box even">
-                                                          <div class="box odd">
-                                                            <div class="box even">
-                                                              <div class="box odd">
-                                                                <div class="box even">
-                                                                  <div class="box odd">
-                                                                    <div class="box even">
-                                                                      <div class="box odd">
-                                                                        <div class="box even">
-                                                                          <div class="box odd">
-                                                                            <div class="box even">
-                                                                              <div class="box odd">
-                                                                                <div
-                                                                                  class="box even"
-                                                                                ></div>
-                                                                              </div>
-                                                                            </div>
-                                                                          </div>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
+    <div class="inner-container">
+      <div class="bbbbbox">
+        <div class="box odd">
+          <div class="box even">
+            <div class="box odd">
+              <div class="box even">
+                <div class="box odd">
+                  <div class="box even">
+                    <div class="box odd">
+                      <div class="box even">
+                        <div class="box odd">
+                          <div class="box even">
+                            <div class="box odd">
+                              <div class="box even">
+                                <div class="box odd">
+                                  <div class="box even">
+                                    <div class="box odd">
+                                      <div class="box even">
+                                        <div class="box odd">
+                                          <div class="box even">
+                                            <div class="box odd">
+                                              <div class="box even">
+                                                <div class="box odd">
+                                                  <div class="box even">
+                                                    <div class="box odd">
+                                                      <div class="box even">
+                                                        <div class="box odd"></div>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -92,9 +66,17 @@ import SakuraLink from '../components/SakuraLink.vue'
 $lineWidth: 16px;
 
 .container {
-  background: #fff;
-  width: 100vw;
+  max-width: 777px;
+  width: 100%;
   height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.inner-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
 }
 
 .bbbbbox {
@@ -102,6 +84,8 @@ $lineWidth: 16px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 0;
+  overflow: hidden;
 }
 
 .box {
@@ -112,6 +96,7 @@ $lineWidth: 16px;
   line-height: 0;
   letter-spacing: 0;
   box-sizing: border-box;
+  background-color: #fff;
 
   &::before,
   &::after {
@@ -123,7 +108,7 @@ $lineWidth: 16px;
     left: 0;
     outline-width: $lineWidth;
     outline-style: solid;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
