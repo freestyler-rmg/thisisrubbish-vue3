@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <router-link :to="{ name: 'BoxOptic' }"><sakura-link /></router-link>
+    <router-link :to="{ name: 'FantasyZone' }"><sakura-link /></router-link>
   </div>
 </template>
 

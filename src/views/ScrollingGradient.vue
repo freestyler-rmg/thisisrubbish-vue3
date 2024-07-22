@@ -3,7 +3,7 @@
     <div class="inner-container">
       <div v-for="box in 7" :key="box" class="box" />
     </div>
-    <router-link :to="{ name: 'FantasyZone' }"><sakura-link /></router-link>
+    <router-link :to="{ name: 'BoxOptic' }"><sakura-link /></router-link>
   </div>
 </template>
 

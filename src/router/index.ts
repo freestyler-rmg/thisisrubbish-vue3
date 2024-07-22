@@ -5,7 +5,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: { name: 'FantasyZone' }
+      redirect: { name: 'SolarSystem' }
     },
     {
       path: '/01',

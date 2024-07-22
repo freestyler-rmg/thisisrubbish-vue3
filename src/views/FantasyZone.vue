@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <router-link :to="{ name: 'Revolver' }"><sakura-link y="50%" /></router-link>
+    <router-link :to="{ name: 'SolarSystem' }"><sakura-link y="50%" /></router-link>
   </div>
 </template>
 

@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <router-link :to="{ name: 'ScrollingGradient' }"><sakura-link /></router-link>
+    <router-link :to="{ name: 'Revolver' }"><sakura-link /></router-link>
   </div>
 </template>
 

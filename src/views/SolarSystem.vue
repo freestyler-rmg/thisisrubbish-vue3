@@ -13,7 +13,7 @@
       <!-- <div class="planet testing" /> -->
     </div>
 
-    <!-- <router-link :to="{ name: 'BoxOptic' }"><sakura-link /></router-link> -->
+    <router-link :to="{ name: 'ScrollingGradient' }"><sakura-link /></router-link>
   </div>
 </template>
 
