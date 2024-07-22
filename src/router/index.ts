@@ -43,6 +43,11 @@ const router = createRouter({
       component: () => import('../views/NotYet.vue')
     },
     {
+      path: '/08',
+      name: 'SolarSystem',
+      component: () => import('../views/SolarSystem.vue')
+    },
+    {
       path: '/:pathMatch(.*)',
       name: '404',
       component: () => import('../views/404.vue')
